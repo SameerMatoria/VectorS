@@ -11,6 +11,13 @@ import { LLMNode } from './nodes/llmNode';
 import { OutputNode } from './nodes/outputNode';
 import { TextNode } from './nodes/textNode';
 
+import { MathNode } from './nodes/mathNode';
+import { MergeNode } from './nodes/mergeNode';
+import { ConditionNode } from './nodes/conditionNode';
+import { DelayNode } from './nodes/delayNode';
+import { NoteNode } from './nodes/noteNode';
+
+
 import 'reactflow/dist/style.css';
 
 const gridSize = 20;
@@ -30,6 +37,12 @@ const selector = (state) => ({
   onNodesChange: state.onNodesChange,
   onEdgesChange: state.onEdgesChange,
   onConnect: state.onConnect,
+
+  math: MathNode,
+  merge: MergeNode,
+  condition: ConditionNode,
+  delay: DelayNode,
+  note: NoteNode,
 });
 
 export const PipelineUI = () => {
@@ -90,7 +103,12 @@ export const PipelineUI = () => {
 
     return (
         <>
-        <div ref={reactFlowWrapper} style={{width: '100wv', height: '70vh'}}>
+        <div
+  ref={reactFlowWrapper}
+  className="canvasPanel"
+  style={{ width: "100%", height: "100%" }}
+>
+
             <ReactFlow
                 nodes={nodes}
                 edges={edges}
