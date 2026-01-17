@@ -4,13 +4,18 @@ import { Handle } from "reactflow";
 
 const containerStyle = {
   minWidth: 200,
+  minHeight: 70,             
   borderRadius: 14,
   padding: 12,
-  background: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))",
+  background:
+    "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))",
   border: "1px solid rgba(255,255,255,0.14)",
   boxShadow: "0 12px 28px rgba(0,0,0,0.35)",
   color: "rgba(255,255,255,0.92)",
   backdropFilter: "blur(6px)",
+  display: "flex",            
+  flexDirection: "column",    
+  gap: 8,                     
 };
 
 

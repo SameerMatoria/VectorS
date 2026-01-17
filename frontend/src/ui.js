@@ -27,6 +27,11 @@ const nodeTypes = {
   llm: LLMNode,
   customOutput: OutputNode,
   text: TextNode,
+  math: MathNode,
+  merge: MergeNode,
+  condition: ConditionNode,
+  delay: DelayNode,
+  note: NoteNode,
 };
 
 const selector = (state) => ({
@@ -38,11 +43,6 @@ const selector = (state) => ({
   onEdgesChange: state.onEdgesChange,
   onConnect: state.onConnect,
 
-  math: MathNode,
-  merge: MergeNode,
-  condition: ConditionNode,
-  delay: DelayNode,
-  note: NoteNode,
 });
 
 export const PipelineUI = () => {
